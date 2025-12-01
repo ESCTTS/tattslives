@@ -1,0 +1,855 @@
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+
+/* --- General Styles --- */
+body {
+    background-color: #000;
+    color: #fff;
+    font-family: 'VT323', monospace;
+    font-size: 20px;
+    margin: 0;
+    padding: 1em;
+}
+
+* {
+    box-sizing: border-box;
+    border-radius: 0 !important; 
+}
+
+/* --- Typography --- */
+h1, h2, h3 {
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    border-bottom: 2px solid #fff;
+    padding-bottom: 0.3em;
+    margin-bottom: 0.8em;
+}
+
+p {
+    line-height: 1.6;
+}
+
+a {
+    color: #fff;
+    text-decoration: underline;
+}
+
+/* Simple inverted hover for links */
+a:hover, a:focus {
+    background-color: #fff;
+    color: #000;
+    text-decoration: none;
+}
+
+/* --- Layout Containers --- */
+.container {
+    display: flex;
+    gap: 2em;
+    max-width: 1200px;
+    margin: 2em auto;
+}
+
+header {
+    text-align: center;
+    border: 2px solid #fff;
+    padding: 1.5em;
+    margin-bottom: 2em;
+}
+
+header h1 {
+    border-bottom: none;
+    margin: 0 0 0.3em 0;
+}
+
+footer {
+    text-align: center;
+    margin-top: 2em;
+    padding: 1em;
+    border: 2px solid #fff;
+    font-size: 0.9em;
+}
+
+/* --- Images, Logo & Media --- */
+img, iframe {
+    filter: grayscale(0%);
+    border: 2px solid #fff;
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+.logo-container {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 120px;
+    height: 120px;
+    z-index: 10;
+}
+
+.logo img {
+    width: 100%;
+    padding: 5px;
+    background: #000;
+}
+
+
+/* --- Sidebar Navigation --- */
+.sidebar {
+    width: 220px;
+    flex-shrink: 0;
+    border: 2px solid #fff;
+    padding: 1.5em 1em;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar li {
+    margin-bottom: 0.5em;
+}
+
+.sidebar a {
+    display: block;
+    padding: 0.8em 1.2em;
+    border: 2px solid #fff;
+    text-align: center;
+    text-decoration: none;
+    background: #000;
+    color: #fff;
+    transition: none; 
+    box-shadow: none; 
+}
+
+.sidebar a:hover {
+    background: #fff;
+    color: #000;
+    transform: none;
+}
+
+.sidebar a.active{
+    background-color: #fff;
+    color: #000;
+}
+
+
+/* --- Main Content Sections --- */
+main {
+    flex: 1;
+}
+
+section, .section, .contact-methods, .contact-form, main div[style*="grid"] > a > div {
+    border: 2px solid #fff;
+    padding: 1.5em;
+    margin-bottom: 2em;
+    background: #000;
+    box-shadow: none; 
+}
+
+/* --- Index Page Specific --- */
+main div[style*="grid"] {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.5em;
+}
+main div[style*="grid"] > a {
+   text-decoration: none;
+}
+main div[style*="grid"] > a > div {
+    transition: none;
+    height: 100%;
+}
+main div[style*="grid"] > a > div:hover {
+    background: #fff;
+    color: #000;
+}
+main div[style*="grid"] > a > div:hover h3 {
+    color: #000;
+    border-color: #000;
+}
+
+/* --- Contact Page Form --- */
+.form-group {
+    margin-bottom: 1.2em;
+}
+.form-group label {
+    display: block;
+    margin-bottom: 0.5em;
+    color: #fff;
+}
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 0.8em;
+    border: 2px solid #fff;
+    background: #000;
+    color: #fff;
+    font-family: inherit;
+    font-size: 16px;
+}
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    background: #fff;
+    color: #000;
+}
+button[type="submit"] {
+    background: #000;
+    color: #fff;
+    border: 2px solid #fff;
+    padding: 0.8em 2em;
+    cursor: pointer;
+    font-size: 1em;
+    font-family: inherit;
+    text-transform: uppercase;
+}
+button[type="submit"]:hover {
+    background: #fff;
+    color: #000;
+}
+
+/* --- About Page Specifics --- */
+.hobbies ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5em;
+    margin: 0.5em 0;
+}
+.hobbies ul li {
+    background: #000;
+    padding: 0.5em 1em;
+    border: 2px solid #fff;
+    text-align: center;
+}
+
+.hobbies ul li:hover{
+    color: white
+}
+
+
+/* Updated .playlist-container for responsive video */
+.playlist-container {
+    position: relative; 
+    width: 100%;
+    padding-bottom: 56.25%; /* 16:9 Aspect Ratio (9 / 16 * 100%) */
+    height: 0;
+    overflow: hidden;
+    margin: 1em 0;
+    border: 2px solid #fff;
+}
+
+.playlist-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none; 
+    filter: none; 
+}
+
+
+/* --- Responsive Design --- */
+@media (max-width: 768px) {
+    body {
+        font-size: 18px;
+    }
+    .container {
+        flex-direction: column;
+    }
+    .sidebar {
+        width: 100%;
+        margin-bottom: 2em;
+    }
+    .logo-container {
+        position: static;
+        width: 100px;
+        height: 100px;
+        margin: 0 auto 1em;
+    }
+}
+
+* {box-sizing: border-box}
+.mySlides {display: none}
+img {vertical-align: middle;}
+ 
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+ 
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+ 
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+ 
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+ 
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+ 
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+ 
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+ 
+.active, .dot:hover {
+  background-color: #717171;
+}
+ 
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+ 
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+ 
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .prev, .next,.text {font-size: 11px}
+}
+
+#live-clock {
+    position: fixed; /* Makes it float relative to the viewport */
+    top: 10px;        /* Distance from the top edge */
+    right: 10px;      /* Distance from the right edge */
+    background-color: #333; /* Dark background */
+    color: #ffffff;   /* Bright green text (retro feel) */
+    font-family: 'VT323', monospace; /* Use your retro font */
+    font-size: 1.5em; /* Make it noticeable */
+    padding: 8px 12px; /* Some padding around the text */
+    border: 2px solid #ffffff; /* Green border */
+    border-radius: 5px; /* Slightly rounded corners */
+    z-index: 1000;    /* Ensures it stays on top of other content */
+    box-shadow: 0 0 10px rgba(184, 184, 184, 0.5); /* A subtle glow */
+}
+
+/*Ai Generated Code*/
+
+/* retro-style.css */
+
+/* Add this to your retro-style.css file */
+#chatbot-container {
+    /* Set a minimum height to accommodate the tallest possible greeting */
+    /* Adjust this value based on your font size and line height */
+    min-height: 1.2em; /* Example: adjust if your font is larger or smaller */
+
+    
+    /* Set a minimum width to accommodate the longest possible greeting */
+    /* "Good afternoon!" is the longest, so estimate its width */
+    min-width: 200px; /* Example: adjust as needed */
+    max-width: 200px;
+    
+    /* Optional: If you want text to wrap, remove min-width or set a specific width */
+    /* If text might overflow and you want to hide it or add ellipses: */
+    /* overflow: hidden; */
+    /* white-space: nowrap; */
+    /* text-overflow: ellipsis; */
+    
+    /* Optional: If you want to visually see the space it takes up */
+    /* border: 1px dashed red; */
+}
+
+/* You might already have other styles for h1, so add these specifically for the ID */
+/* If you don't want it to take up the full width, you could do this: */
+/* display: inline-block; */
+/* text-align: center; /* if you want the greeting centered within its fixed space */
+
+        /* Add this style for the typing animation */
+        h1.typed-text::after {
+            content: '|'; /* Blinking cursor */
+            display: inline-block;
+            animation: blink 0.8s infinite;
+        }
+ 
+        @keyframes blink {
+            50% {
+                opacity: 0;
+            }
+        }
+ 
+
+/* Editor Container Styling */
+.live-editor-section {
+    background: #000000;
+    padding: 20px;
+    border: 2px solid rgb(255, 255, 255);
+    box-shadow: 5px 5px 0px #333;
+    margin-top: 30px;
+}
+
+/* Tabs */
+.editor-tabs {
+    display: flex;
+    margin-bottom: 10px;
+    border-bottom: 2px solid rgb(255, 255, 255);
+}
+
+.tab-btn {
+    background: rgb(0, 0, 0);
+    border: 2px solid rgb(255, 255, 255);
+    border-bottom: none;
+    padding: 10px 20px;
+    margin-right: 5px;
+    cursor: pointer;
+    font-family: 'VT323', monospace; /* Matches your theme */
+    font-size: 1.2rem;
+}
+
+.tab-btn.active {
+    background: rgb(0, 0, 0);
+    color: white;
+}
+
+/* The Stacking Trick */
+.editor-wrapper {
+    position: relative;
+    height: 300px;
+    background: #000000; /* Dark background for code */
+    border: 2px solid #333;
+}
+
+.editor-group {
+    display: none; /* Hidden by default */
+    height: 100%;
+    width: 100%;
+}
+
+.editor-group.active {
+    display: block;
+}
+
+.stack-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+/* Shared styles for BOTH layers to ensure alignment */
+.code-layer, 
+.code-layer code { 
+    /* Force both layers to use the exact same font */
+    font-family: 'Consolas', 'Monaco', 'Courier New', monospace !important;
+    font-size: 16px !important;
+    line-height: 1.5 !important;
+    letter-spacing: normal !important; 
+    
+    /* Box Model syncing */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    margin: 0 !important;
+    padding: 15px !important;
+    border: none !important;
+    box-sizing: border-box;
+    white-space: pre-wrap;
+    overflow: auto;
+}
+
+/* Specific fix for the input layer to stop browser defaults */
+.input-layer {
+    z-index: 2;
+    background: transparent;
+    color: transparent; 
+    caret-color: white; /* Show the cursor */
+    outline: none;
+    resize: none;
+    
+    /* Fix specific browser quirks for textareas */
+    -webkit-text-fill-color: transparent;
+}
+
+/* Specific fix for Prism layer */
+.pre-layer {
+    z-index: 1;
+    pointer-events: none; 
+}
+
+/* Bottom Layer (Prism) */
+.pre-layer {
+    z-index: 1;
+    pointer-events: none; /* Let clicks pass through to textarea */
+}
+
+/* Top Layer (Input) */
+.input-layer {
+    z-index: 2;
+    background: transparent;
+    color: transparent; /* Hide the text... */
+    caret-color: rgb(27, 25, 25); /* ...but show the cursor */
+    outline: none;
+    resize: none;
+}
+
+/* Preview Area */
+.preview-wrapper {
+    margin-top: 20px;
+}
+
+#live-preview {
+    width: 100%;
+    height: 300px;
+    border: 2px solid rgb(255, 255, 255);
+    background: rgb(0, 0, 0);
+}
+
+/* Topology Layout */
+.topology-wrapper {
+    display: flex;
+    border: 2px solid #333;
+    height: 500px;
+    background: #000; /* Black background for the network */
+    margin-top: 20px;
+}
+
+/* The Canvas Area */
+#mynetwork {
+    flex: 3; /* Takes up 75% of width */
+    height: 100%;
+    border-right: 2px solid #333;
+    background: #111;
+}
+
+/* The Info Panel */
+#node-details {
+    flex: 1; /* Takes up 25% of width */
+    padding: 20px;
+    background: #222;
+    color: rgb(255, 255, 255); 
+    font-family: 'VT323', monospace;
+    overflow-y: auto;
+}
+
+#node-details h3 {
+    border-bottom: 1px solid rgb(255, 255, 255);
+    padding-bottom: 10px;
+    margin-top: 0;
+}
+
+#node-details p {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.retro-btn {
+    background: #000;
+    color: rgb(255, 255, 255);
+    border: 2px solid rgb(255, 255, 255);
+    padding: 5px 10px;
+    font-family: 'VT323', monospace;
+    font-size: 1.2rem;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: all 0.2s;
+}
+
+.retro-btn:hover {
+    background: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+    box-shadow: 0 0 10px rgb(0, 0, 0);
+}
+
+/* Glossary Search Bar */
+.search-wrapper {
+    display: flex;
+    align-items: center;
+    background: #000;
+    border: 2px solid #0f0;
+    padding: 10px;
+    margin-bottom: 20px;
+    max-width: 500px;
+}
+
+.search-icon {
+    color: #0f0;
+    font-weight: bold;
+    margin-right: 10px;
+    font-size: 1.2rem;
+}
+
+#search-input {
+    background: transparent;
+    border: none;
+    color: #fff;
+    font-family: 'VT323', monospace;
+    font-size: 1.2rem;
+    width: 100%;
+    outline: none;
+}
+
+/* The Grid of Cards */
+.glossary-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); /* Responsive Columns */
+    gap: 20px;
+}
+
+/* Individual Cards */
+.term-card {
+    background: rgb(0, 0, 0);
+    border: 1px solid rgb(255, 255, 255);
+    padding: 15px;
+    transition: transform 0.2s, border-color 0.2s;
+}
+
+.term-card:hover {
+    transform: translateY(-5px);
+    border-color: rgb(255, 255, 255);
+    box-shadow: 0 5px 15px rgba(0, 255, 0, 0.1);
+}
+
+.term-title {
+    color: rgb(255, 255, 255);
+    font-size: 1.4rem;
+    margin-top: 0;
+    margin-bottom: 10px;
+    border-bottom: 1px solid rgb(255, 255, 255);
+    padding-bottom: 5px;
+    text-transform: uppercase;
+}
+
+.term-def {
+    color: #ccc;
+    font-size: 1rem;
+    line-height: 1.4;
+}
+
+.term-tag {
+    display: inline-block;
+    background: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+    font-size: 0.8rem;
+    padding: 2px 6px;
+    margin-top: 10px;
+    border-radius: 3px;
+}
+
+/* --- CISCO GAME STYLES --- */
+
+.game-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #0a0a0a;
+    border: 2px solid #333;
+    padding: 20px;
+    margin-top: 20px;
+    gap: 10px;
+    flex-wrap: wrap; /* Mobile friendly */
+}
+
+.wire-pool, .connector-slots {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    background: #000;
+    padding: 10px;
+    border: 1px solid #444;
+    min-width: 120px;
+    min-height: 250px;
+}
+
+/* The Controls in the middle */
+.game-controls {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.arrow {
+    color: rgb(0, 0, 0);
+    font-family: 'VT323', monospace;
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+/* The Wires */
+.wire {
+    height: 22px;
+    width: 100%;
+    cursor: pointer;
+    border: 1px solid #333;
+    position: relative;
+    transition: all 0.2s;
+}
+
+.wire:hover {
+    transform: translateX(5px);
+    border-color: #fff;
+    box-shadow: 0 0 5px rgba(255,255,255,0.5);
+}
+
+.wire.used {
+    opacity: 0.1;
+    pointer-events: none;
+    transform: none;
+}
+
+/* WIRE COLORS (CSS Gradients) */
+.bg-orange { background: #ff8c00; }
+.bg-green { background: #00cc00; }
+.bg-blue { background: #0066ff; }
+.bg-brown { background: #8b4513; }
+
+/* Striped Wires */
+.bg-w-orange { background: repeating-linear-gradient(90deg, #fff, #fff 5px, #ff8c00 5px, #ff8c00 10px); }
+.bg-w-green { background: repeating-linear-gradient(90deg, #fff, #fff 5px, #00cc00 5px, #00cc00 10px); }
+.bg-w-blue { background: repeating-linear-gradient(90deg, #fff, #fff 5px, #0066ff 5px, #0066ff 10px); }
+.bg-w-brown { background: repeating-linear-gradient(90deg, #fff, #fff 5px, #8b4513 5px, #8b4513 10px); }
+
+/* The Connector Slots */
+.slot {
+    height: 22px;
+    background: #000000;
+    border: 1px dashed rgb(255, 255, 255);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgb(255, 255, 255);
+    font-size: 0.8rem;
+    font-family: monospace;
+}
+
+/* Status Text */
+.status-display {
+    margin-top: 15px;
+    font-family: 'VT323', monospace;
+    font-size: 1.2rem;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    min-height: 30px;
+}
+
+.status-success { color: #0f0; text-shadow: 0 0 5px #0f0; }
+.status-fail { color: #f00; text-shadow: 0 0 5px #f00; }
+
+/* Danger Button (Reset) override */
+.retro-btn.danger:hover {
+    background: red;
+    color: white;
+    box-shadow: 0 0 10px red;
+}
+
+/* --- PYTHON SORTING VISUALIZER --- */
+.visualizer-container {
+    background: #000;
+    border: 2px solid rgb(255, 255, 255);
+    padding: 15px;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#sortingCanvas {
+    background: #111;
+    border: 1px solid #333;
+    display: block;
+    margin-bottom: 15px;
+}
+
+.controls {
+    display: flex;
+    flex-wrap: wrap; /* Allows buttons to wrap on smaller screens */
+    gap: 10px;
+    justify-content: center;
+    width: 100%;
+}
+
+.speed-control {
+    display: flex;
+    align-items: center;
+    color: rgb(58, 58, 58);
+    font-family: 'VT323', monospace;
+    font-size: 1rem;
+    gap: 5px;
+}
+
+#speedSlider {
+    -webkit-appearance: none;
+    width: 120px;
+    height: 8px;
+    background: rgb(255, 255, 255);
+    outline: none;
+    opacity: 0.7;
+    transition: opacity .2s;
+    border-radius: 5px;
+}
+
+#speedSlider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background: rgb(0, 0, 0);
+    cursor: pointer;
+    box-shadow: 0 0 5px rgb(255, 255, 255);
+}
+
+#speedSlider::-moz-range-thumb {
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background: rgb(255, 255, 255);
+    cursor: pointer;
+    box-shadow: 0 0 5px rgb(255, 255, 255);
+}

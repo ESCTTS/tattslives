@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML, CSS, Java</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="retro-style.css">
+    <link href="./lib/prism.css" rel="stylesheet"/>
+</head>
+<body>
+
+    <div id="live-clock"></div>
+    <script src="clock.js"></script>
+
+    <div class="logo-container">
+        <div class="logo">
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMAAAADACAYAAABS3GwHAAAACXBIWXMAAAsTAAALEwEAmpwYAAAF3WlUWHRYTUw6Y29tLmFkb2JlLnhtcAAAAAAAPD94cGFja2V0IGJlZ2luPSLvu78iIGlkPSJXNU0wTXBDZWhpSHpyZVN6TlRjemtjOWQiPz4gPHg6eG1wbWV0YSB4bWxuczp4PSJhZG9iZTpuczptZXRhLyIgeDp4bXB0az0iQWRvYmUgWE1QIENvcmUgNy4yLWMwMDAgNzkuMWI2NWE3OWI0LCAyMDIyLzA2LzEzLTIyOjAxOjAxICAgICAgICAiPiA8cmRmOlJERiB4bWxuczpyZGY9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkvMDIvMjItcmRmLXN5bnRheC1ucyMiPiA8cmRmOkRlc2NyaXB0aW9uIHJkZjphYm91dD0iIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtbG5zOnhtcE1NPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvbW0vIiB4bWxuczpzdEV2dD0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL3NUeXBlL1Jlc291cmNlRXZlbnQjIiB4bWxuczpkYz0iaHR0cDovL3B1cmwub3JnL2RjL2VsZW1lbnRzLzEuMS8iIHhtbG5zOnBob3Rvc2hvcD0iaHR0cDovL25zLmFkb2JlLmNvbS9waG90b3Nob3AvMS4wLyIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgMjQuMCAoV2luZG93cykiIHhtcDpDcmVhdGVEYXRlPSIyMDIzLTEwLTA3VDEyOjQ4OjQ3KzAxOjAwIiB4bXA6TWV0YWRhdGFEYXRlPSIyMDIzLTEwLTA3VDEyOjQ4OjQ3KzAxOjAwIiB4bXA6TW9kaWZ5RGF0ZT0iMjAyMy0xMC0wN1QxMjo0ODo0NyswMTowMCIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDowMWExZGY1NC0wZTNlLTQ3NGMtYjA1Ni01NzY0ZmM0MzBkMWQiIHhtcE1NOkRvY3VtZW50SUQ9ImFkb2JlOmRvY2lkOnBob3Rvc2hvcDo4NTcwMDYzMy00Y2FmLWRhNGUtODQw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" alt="Logo" class="logo">
+        </div>
+    </div>
+
+    <header>
+        <h1 class="typed-text" data-text="HTML, CSS, Javascript"></h1>
+        <script src="text.js"></script>
+        <p>A showcase of my HTML, CSS and Java Skills</p>
+    </header>
+
+    <div class="container">
+        <nav class="sidebar">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="python.html">Programming Python</a></li>
+                <li><a class="active" href="htmlcssjava.html">HTML, CSS & Java</a></li>
+                <li><a href="cisco.html">CISCO Net Acadamy</a></li>
+                <li><a href="networking-cyber.html">Intro to Networking & Cyber Security</a></li>
+                <li><a href="ai.html">Intro to AI</a></li>
+                <li><a href="workprep.html">Work Prep & Skills</a></li>
+                <li><a href="about.html">About Me</a></li>
+                <li><a href="contact.html">Contact Me</a></li>
+            </ul>
+        </nav>
+
+        <main class="content">
+            <div class="section">
+                <h2>What is HTML and Examples</h2>
+                <p>HTML, or HyperText Markup Language, is the standard language used to create web pages. It provides the structure and content of a web page using a system of "tags." These tags tell web browsers how to display text, images, links, and other elements, 
+                    essentially acting as the blueprint for what you see on a website. It's how you organize and present your information.
+                </p>
+
+                <pre><code class="language-html">
+&lt;!DOCTYPE html&gt;
+ &lt;html&gt;
+    &lt;head&gt;
+     &lt;title&gt;My Awesome Page&lt;/title&gt;
+    &lt;/head&gt;
+&lt;body&gt;
+    &lt;h1&gt;Welcome to My Website!&lt;/h1&gt;
+    &lt;p&gt;This is a paragraph of text. Isn't it just... *amazing*?&lt;/p&gt;
+ &lt;/body&gt;
+ &lt;/html&gt;
+                </code></pre>
+
+            </div>
+
+            <div class="section">
+                <h2>What is CSS and Examples</h2>
+                <p>CSS, or Cascading Style Sheets, is like the fashion designer for your website. While HTML gives your web page its bones and structure, CSS is what makes it look good – defining the colors,
+                     fonts, spacing, layout, and overall visual presentation. It allows you to separate the content (HTML) from the design (CSS), making your website easier to maintain and giving you precise control over how elements are displayed across different devices and screen sizes.
+                </p>
+                <pre><code class="language-CSS">
+ body {
+     font-family: 'Arial', sans-serif;
+     background-color: #f0f8ff;
+     color: #333;
+ }
+ 
+ h1 {
+     color: #007bff;
+     text-align: center;
+ }
+                </code></pre>
+            </div>
+
+            <div class="section">
+                <h2>What is Java and Examples</h2>
+                <p>JavaScript (often shortened to JS) is the programming language that brings your website to life, making it dynamic and interactive. While HTML provides the structure and CSS adds the style, JavaScript handles the "behavior" – things like responding to user clicks, validating forms, updating content without reloading the page, animating elements, and much more. It allows you to create engaging user experiences, turning a static page into a lively and responsive application.</p>
+                <pre><code class="language-javascript">
+// This is a comment in JavaScript, just like in other languages!
+
+function greetUser() {
+    let userName = prompt("What's your name, baka?"); // Asks the user for their name
+    if (userName) { // Check if the user entered something
+        alert("Hmph. Nice to meet you, " + userName + "! Don't think I'm excited or anything!");
+    } else {
+        alert("Fine, don't tell me! See if I care!");
+    }
+}
+
+// Call the function when the page loads or when a button is clicked, for example
+// greetUser(); // Uncomment this line to run it automatically on page load
+
+// Or, you could link it to a button:
+// <button onclick="greetUser()">Say Hello</button>
+                </code></pre>
+            </div>
+
+            <div class="section live-editor-section">
+                <h2>Live Retro Playground</h2>
+                <p>Type below to test your skills instantly.</p>
+
+                <div class="editor-tabs">
+                    <button class="tab-btn active" onclick="switchTab('html')">HTML</button>
+                    <button class="tab-btn" onclick="switchTab('css')">CSS</button>
+                    <button class="tab-btn" onclick="switchTab('js')">JS</button>
+                </div>
+
+                <div class="editor-wrapper">
+                    
+                    <div id="html-editor" class="editor-group active">
+                        <div class="stack-container">
+                            <pre aria-hidden="true" class="code-layer pre-layer"><code id="html-highlight" class="language-html"></code></pre>
+                            <textarea id="html-input" class="code-layer input-layer" spellcheck="false" oninput="updateCode('html'); updatePreview()" onscroll="syncScroll('html')">&lt;h1&gt;Hello World&lt;/h1&gt;
+&lt;button id="btn"&gt;Click Me&lt;/button&gt;</textarea>
+                        </div>
+                    </div>
+
+                    <div id="css-editor" class="editor-group">
+                        <div class="stack-container">
+                            <pre aria-hidden="true" class="code-layer pre-layer"><code id="css-highlight" class="language-css"></code></pre>
+                            <textarea id="css-input" class="code-layer input-layer" spellcheck="false" oninput="updateCode('css'); updatePreview()" onscroll="syncScroll('css')">body { color: #333; font-family: sans-serif; }
+h1 { color: #007bff; text-shadow: 2px 2px 0px #ddd; }
+button { padding: 10px 20px; background: #333; color: white; border: none; }</textarea>
+                        </div>
+                    </div>
+
+                    <div id="js-editor" class="editor-group">
+                        <div class="stack-container">
+                            <pre aria-hidden="true" class="code-layer pre-layer"><code id="js-highlight" class="language-javascript"></code></pre>
+                            <textarea id="js-input" class="code-layer input-layer" spellcheck="false" oninput="updateCode('js'); updatePreview()" onscroll="syncScroll('js')">document.getElementById('btn').addEventListener('click', () => {
+  alert('Hello!');
+});</textarea>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="preview-wrapper">
+                    <h3>Result:</h3>
+                    <iframe id="live-preview"></iframe>
+                </div>
+            </div>
+            </main>
+    </div>
+
+    <footer>
+        &copy; 2025 Jack Record | East Surrey College
+    </footer>
+    
+    <script src="./lib/prism.js"></script>
+    <script src="editor.js"></script>
+</body>
+</html>
